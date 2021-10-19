@@ -42,31 +42,84 @@ Up until now we have looked at how we can write software, in C, to configure and
 <p align="center">
   <img src="imgs/verilator_overview.png" width="300" />
 </p>
-We will use an open-source hardware simulator, called [Verilator](https://www.veripool.org/verilator/). With Verilator we will be able to simulate some hardware that we have described in Verilog along with arduino-like code that is running on a simulated microprocessor. By the end of the labs we will be able to construct hardware for something known as a pulse-width modulation (PWM) module, simulate it, and compare it to the PWM module on our TinyPico devices. 
+We will use an open-source hardware simulator, called [Verilator](https://www.veripool.org/verilator/). With Verilator we will be able to simulate some hardware that we have described in Verilog along with arduino-like code that is able to interact with it. By the end of the labs we will be able to construct hardware for something known as a pulse-width modulation (PWM) module, simulate it, and compare it to the PWM module on our TinyPico devices. 
 
 I have tried to break down each of the concepts of verilog that I am teaching into short 5-10 minute videos. In the rest of this document you will find the links to those videos.
 
-1. Overview of a what a HDLs purpose is.
-	* How to develop hardware?
-	* Schematic level
-	* Abstraction level increase: Textually describe circuits
-	* VLSI design flow 
-	* Hardware/Software boundary : how do the two worlds meet
-	* Verilator Simulator : cycle accurate simulation -> doesn't simulate the physics, will simulate the timing and logical connections. Gate-level cycle accurate simulations.
-	* Plan in this course: simulate both the software running here, and the hardware here.
-	* What the next labs will look like.
-2. Recap of logic gates.
-	* What is an AND gate?
-	* What is an OR gate?
-	* What is a NOT gate?
-	* Chaining gates together, making a NAND gate.
-	* Creating modules or blocks
-3. Verilog modules : Syntax
-	* Inputs 
-	* Outputs
-4. simple_in_n_out
-	* How to define a module.
-	* How to define some gates.
+## Recap of logic gates
+
+To start with we will only consider simpler digital circuits so that we can get used to the Verilog syntax and paradigms. Let's briefly recap some basic logic gates. 
+
+<p align="center">
+  <img src="imgs/AND.png" width="300" />
+</p>
+
+Above is an __AND__ gate. This gate has two inputs ``A`` and ``B`` and an output ``Q`` that is only high when the two inputs are both high.
+
+<p align="center">
+  <img src="imgs/OR.png" width="300" />
+</p>
+
+Above is an __OR__ gate. This gate has two inputs ``A`` and ``B`` and an output ``Q`` that is high when either of the two inputs are high.
+
+<p align="center">
+  <img src="imgs/NOT.png" width="300" />
+</p>
+
+Above is a __NOT__ gate. This gate has one inputs ``A`` and an output ``Q`` that is the opposite of whatever the input is.
+
+<p align="center">
+  <img src="imgs/LG_CHAINING.png" width="300" />
+</p>
+
+We can also of course chain these gates together, above we have an __AND__ gate that is followed by an __NOT__ gate. This is called a __NAND__ gate. 
+
+<p align="center">
+  <img src="imgs/NAND.png" width="300" />
+</p>
+
+However, sometimes we have a more convenient notation for showing this, where if we are inverting an input or an output we put a ``o`` next to it. For example, above represents a __NAND__ gate, the same as chaining a __NOT__ gate to the output of a __AND__ gate.
+
+<p align="center">
+  <img src="imgs/AND_3_input.png" width="300" />
+</p>
+
+We can also have more than two inputs for our gates, above shown a __3-input AND__ gate, where the output ``Q`` is only high when all three inputs are high.
+
+<p align="center">
+  <img src="imgs/modules.png" width="300" />
+</p>
+
+To aid design, we also often package gates up into modules, where we define some input ports and output ports and the internal logic is hidden. These modules can then be instantiated multiple times, making hierarchical design of circuits a bit cleaner.
+
+## Simple in-n-out circuit
+
+<p align="center">
+  <img src="imgs/simple_in_n_out.png" width="300" />
+</p>
+
+Now that we have recapped some of the basics of logic gates and modular digital design, lets put them to use designing the simple circuit above in Verilog. Once we've finished our design we can then simulate it and examine the waveform of the signals in a waveform viewer. __Please watch the following video that describes how we can do this with Verilog and Verilator.__
+
+<p align="center">
+        <a href="http://www.youtube.com/watch?feature=player_embedded&v=fnoMnokP9mI
+        " target="_blank"><img src="imgs/video_thumbnails/simple_in_n_out.png"
+        alt="Lesson Video" width="510" height="360" border="10" /></a>
+</p>
+
+To build and run this example on the Linux lab machines (assuming you are in the root of this repository):
+```
+	cd lessons/1-simple_in_n_out
+	make
+```
+
+Once the simulation completes you can then open ``gtkwave`` to look at the waveform.
+
+```
+	gtkwave wavedump.vcd
+```
+
+## Intermediate signals
+
 5. Intermediate signals
 	* How to define wires (or signals) to connect things together.
 6. Bus signals
