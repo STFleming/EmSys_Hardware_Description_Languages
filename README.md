@@ -206,6 +206,17 @@ _Puts the pieces of the last two videos together to make a larger multiplexer._
         alt="Lesson Video" width="510" height="360" border="10" /></a>
 </p>
 
+To build and run this example on the Linux lab machines (assuming you are in the root of this repository):
+```
+	cd lessons/4-always_block_mux
+	make
+```
+
+Once the simulation completes you can then open ``gtkwave`` to look at the waveform.
+
+```
+	gtkwave wavedump.vcd
+```
 
 ## Conclusion
 
