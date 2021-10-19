@@ -120,8 +120,57 @@ Once the simulation completes you can then open ``gtkwave`` to look at the wavef
 
 ## Intermediate signals
 
-5. Intermediate signals
-	* How to define wires (or signals) to connect things together.
+<p align="center">
+  <img src="imgs/intermediate_signal.png" width="300" />
+</p>
+
+Sometimes we need internal signals to connect up our circuit, not just input and output ports. __Please watch the following video that describes how we can define such signals with Verilog.__
+
+<p align="center">
+        <a href="http://www.youtube.com/watch?feature=player_embedded&v=ljmm6S6k2Aw
+        " target="_blank"><img src="imgs/video_thumbnails/intermediate_signal.png"
+        alt="Lesson Video" width="510" height="360" border="10" /></a>
+</p>
+
+To build and run this example on the Linux lab machines (assuming you are in the root of this repository):
+```
+	cd lessons/2-intermediate_signal
+	make
+```
+
+Once the simulation completes you can then open ``gtkwave`` to look at the waveform.
+
+```
+	gtkwave wavedump.vcd
+```
+
+## Bus Signals and Multiplexers
+
+<p align="center">
+  <img src="imgs/busmux.png" width="300" />
+</p>
+
+Sometimes we want more than one wire, and we want to be able to switch between different sets of outputs. __The following video explains how we can describe multibit wires in Verilog and construct a simple multiplexer.__
+
+<p align="center">
+        <a href="http://www.youtube.com/watch?feature=player_embedded&v=Jb-gnzetZts
+        " target="_blank"><img src="imgs/video_thumbnails/busmux.png"
+        alt="Lesson Video" width="510" height="360" border="10" /></a>
+</p>
+
+To build and run this example on the Linux lab machines (assuming you are in the root of this repository):
+```
+	cd lessons/3-intermediate_signal
+	make
+```
+
+Once the simulation completes you can then open ``gtkwave`` to look at the waveform.
+
+```
+	gtkwave wavedump.vcd
+```
+
+
 6. Bus signals
 	* How to define arrays of wires (usually to represent numbers).
 7. Procedural always_blocks
