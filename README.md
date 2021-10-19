@@ -98,7 +98,7 @@ To aid design, we also often package gates up into modules, where we define some
   <img src="imgs/simple_in_n_out.png" width="300" />
 </p>
 
-Now that we have recapped some of the basics of logic gates and modular digital design, lets put them to use designing the simple circuit above in Verilog. Once we've finished our design we can then simulate it and examine the waveform of the signals in a waveform viewer. __Please watch the following video that describes how we can do this with Verilog and Verilator.__
+Now that we have recapped some of the basics of logic gates and modular digital design, let's put them to use designing the simple circuit above in Verilog. Once we've finished our design we can then simulate it and examine the waveform of the signals in a waveform viewer. __Please watch the following video that describes how we can do this with Verilog and Verilator.__
 
 <p align="center">
         <a href="http://www.youtube.com/watch?feature=player_embedded&v=fnoMnokP9mI
@@ -209,11 +209,14 @@ _Puts the pieces of the last two videos together to make a larger multiplexer._
 
 ## Conclusion
 
-__Knowledge of harwdare is critical for embedded systems.__
+__Knowledge of hardware is critical for embedded systems.__
 
-* Design decisions often need to be made about what computations are performed in software vs hardware for power/latency/throughput constraints. These constraints are often critical to the safe, reliable, and cost effective design of such systems.
+* Design decisions often need to be made about what computations are performed in software vs hardware for power/latency/throughput constraints. These constraints are often critical to the safe, reliable, and cost-effective design of such systems.
 * Communication between software and hardware is often critical, and knowledge of precisely how long operations take may be essential.
 
-In this lecture we have started to dive into how hardware is described. I feel that studying this gives you an essential perspective on how such systems are built, and on hardware software interactions. What you are learning here, is what chip designers and ASIC engineers at Apple/Intel/AMD all use day to day. 
+In this lecture, we have started to dive into how hardware is described. I feel that studying this gives you an essential perspective on how such systems are built, and on hardware-software interactions. What you are learning here, is what chip designers and ASIC engineers at Apple/Intel/AMD all use day to day.
 
-We started the lecture examining why hardware description languages came about. Then we recapped some basic digital logic gates and started exploring how we can use Verilog to describe circuits constructed from such gates. Finally, we looked at the Verilog procedural blocks, and how we can start to describe more complicated circuits.
+We started the lecture by examining why hardware description languages came about. Then we recapped some basic digital logic gates and started exploring how we can use Verilog to describe circuits constructed from such gates. Finally, we looked at the Verilog procedural blocks, and how we can start to describe more complicated circuits.
+
+__Next time we shall look at Sequential circuits, which can save state.__
+
