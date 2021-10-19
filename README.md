@@ -2,6 +2,14 @@
 
 Up until this point, we have been learning about embedded systems from a SW perspective. However, let's start looking from a hardware perspective and describe some hardware as if we were chip designers or hardware engineers.
 
+The lesson will consist of a few short videos describing different parts of hardware description with Verilog, below is some quick links to those videos:
+* [1: simple in-n-out](https://www.youtube.com/watch?v=fnoMnokP9mI)
+* [2: intermediate signals](https://www.youtube.com/watch?v=ljmm6S6k2Aw)
+* [3: bus signals and multiplexers](https://www.youtube.com/watch?v=Jb-gnzetZts)
+* [4(a): procedural blocks](https://www.youtube.com/watch?v=xdUcyrSBPWk)
+* [4(b): literal values & concatenation](https://www.youtube.com/watch?v=3n8KvPvERuo)
+* [4(c): larger multiplexer](https://www.youtube.com/watch?v=KYga2d_1dnA)
+
 ## Early microprocessor design
 
 <p align="center">
