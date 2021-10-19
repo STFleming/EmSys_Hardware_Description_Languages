@@ -160,7 +160,7 @@ Sometimes we want more than one wire, and we want to be able to switch between d
 
 To build and run this example on the Linux lab machines (assuming you are in the root of this repository):
 ```
-	cd lessons/3-intermediate_signal
+	cd lessons/3-busses_and_muxes
 	make
 ```
 
@@ -170,10 +170,40 @@ Once the simulation completes you can then open ``gtkwave`` to look at the wavef
 	gtkwave wavedump.vcd
 ```
 
+## Procedural Always Blocks
 
-6. Bus signals
-	* How to define arrays of wires (usually to represent numbers).
-7. Procedural always_blocks
-	* How to specify the logic in a more code-like behavioural fashion.
+<p align="center">
+  <img src="imgs/always_mux.png" width="300" />
+</p>
 
-8. Recap!
+In the previous video tutorials we described the structure of our circuits, with wires and operations. However, for more complicated blocks of hardware this can get quite cumbersome. Luckily, Verilog has the ability for us to describe a block of hardwares behaviour, rather than structure, using something called, procedural blocks. Within these blocks we can describe some behaviour of some logic much closer to how we would write code that we would execute on a processor. Each line of code can be conceptually thought to execute sequentially within the procedural block. __In this section there are three videos that aim to clarify this idea a bit better. They will also show an example where we construct a larger multiplexer circuit.
+
+### Video 1 : Procedural blocks
+
+_Discusses how to use an ```always_comb``` block.__
+
+<p align="center">
+        <a href="http://www.youtube.com/watch?feature=player_embedded&v=xdUcyrSBPWk
+        " target="_blank"><img src="imgs/video_thumbnails/always_mux_video1_thumb.png"
+        alt="Lesson Video" width="510" height="360" border="10" /></a>
+</p>
+
+### Video 2: Literal values
+
+_Discusses how to declare literal values in Verilog including bitwidth._
+<p align="center">
+        <a href="http://www.youtube.com/watch?feature=player_embedded&v=3n8KvPvERuo
+        " target="_blank"><img src="imgs/video_thumbnails/always_mux_video2_thumb.png"
+        alt="Lesson Video" width="510" height="360" border="10" /></a>
+</p>
+
+### Video 3: Describing a larger Multiplexer
+
+_Puts the pieces of the last two videos together to make a larger multiplexer._
+<p align="center">
+        <a href="http://www.youtube.com/watch?feature=player_embedded&v=KYga2d_1dnA
+        " target="_blank"><img src="imgs/video_thumbnails/always_mux_video3_thumb.png"
+        alt="Lesson Video" width="510" height="360" border="10" /></a>
+</p>
+
+
