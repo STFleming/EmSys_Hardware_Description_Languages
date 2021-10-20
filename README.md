@@ -15,7 +15,7 @@ The lesson will consist of a few short videos describing different parts of hard
 <p align="center">
   <img src="imgs/Intel_C4004.jpeg" width="300" />
 </p>
-In 1971, the first commercial microprocessor, the Intel 4004, was developed. It was a revolutionary technology that placed a full 4-bit general-purpose CPU into a small silicon chip, consisting of around 2300 transistors. Before the 4004 CPUs would have consisted of many chips, would have been much slower, and much more power-hungry.  
+In 1971, the first commercial microprocessor, the Intel 4004, was developed. It was a revolutionary technology that placed a full 4-bit general-purpose CPU into a small silicon chip, consisting of around 2300 transistors. Before the 4004, such systems would have consisted of many chips, would have been much slower, and much more power-hungry.  
 
 <p align="center">
   <img src="imgs/4004-lajos-schematics.gif" width="600" />
